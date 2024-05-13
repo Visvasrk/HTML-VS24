@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Bar</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+    }
+    #gameBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+    #gameBarContent {
+        display: flex;
+        align-items: center;
+    }
+    .icon {
+        font-size: 24px;
+        margin: 0 10px;
+        color: #000; /* Black icons */
+    }
+    .details {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .details span {
+        margin-left: 5px;
+    }
+    #menuIcon {
+        font-size: 30px;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #111;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        z-index: 1001;
+    }
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+    }
+    .modal-close:hover {
+        color: red;
+    }
+    .details-heading {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .details-value {
+        margin-bottom: 20px;
+    }
+    .progress-bar {
+        width: 200px;
+        height: 10px;
+        background-color: #333;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .progress {
+        height: 100%;
+        background-color: #0ff;
+    }
+</style>
+</head>
+<body>
+
+<div id="gameBar" class="minimized">
+    <div id="gameBarContent">
+        <div id="healthIcon" class="icon">💖</div>
+        <div id="health" class="icon-value">100%</div>
+        <div id="weaponsIcon" class="icon">🗡️</div>
+        <div id="weapons" class="icon-value">x1</div>
+        <div id="coinsIcon" class="icon">💰</div>
+        <div id="coins" class="icon-value">0</div>
+    </div>
+    <div id="menuIcon" class="icon">☰</div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">✖</span>
+        <div class="details-heading">Player Details</div>
+        <div class="details">
+            <span id="healthIconModal" class="icon">💖</span>
+            <span id="healthModal" class="details-value">Health: 100%</span>
+            <div id="healthBarModal" class="progress-bar">
+                <div id="healthProgressModal" class="progress"></div>
+            </div>
+        </div>
+        <div class="details">
+            <span id="weaponsIconModal" class="icon">🗡️</span>
+            <span id="weaponsModal" class="details-value">Weapons: x1</span>
+            <div id="weaponsBarModal" class="progress-bar">
+                <div id="weaponsProgressModal" class="progress"></div>
+            </div>
+        </div>
+        <div class="details">
+            <span id="coinsIconModal" class="icon">💰</span>
+            <span id="coinsModal" class="details-value">Coins: 0</span>
+            <div id="coinsBarModal" class="progress-bar">
+                <div id="coinsProgressModal" class="progress"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const gameBar = document.getElementById('gameBar');
+    const menuIcon = document.getElementById('menuIcon');
+    const modal = document.getElementById('modal');
+    const modalClose = document.querySelector('.modal-close');
+    const healthBar = document.getElementById('healthBarModal');
+    const weaponsBar = document.getElementById('weaponsBarModal');
+    const coinsBar = document.getElementById('coinsBarModal');
+    const healthProgress = document.getElementById('healthProgressModal');
+    const weaponsProgress = document.getElementById('weaponsProgressModal');
+    const coinsProgress = document.getElementById('coinsProgressModal');
+
+    gameBar.addEventListener('click', function() {
+        toggleDetails();
+    });
+
+    function toggleDetails() {
+        const isMinimized = gameBar.classList.contains('minimized');
+        if (isMinimized) {
+            gameBar.classList.remove('minimized');
+            modal.style.display = 'block';
+        } else {
+            gameBar.classList.add('minimized');
+            modal.style.display = 'none';
+        }
+    }
+
+    menuIcon.addEventListener('click', function() {
+        // Your menu functionality here
+        // For example:
+        console.log('Menu clicked!');
+    });
+
+    modalClose.addEventListener('click', function() {modal.style.display = 'none';
+        gameBar.classList.add('minimized');
+    });
+
+    function updateHealth(newHealth) {
+        document.getElementById('healthModal').textContent = 'Health: ' + newHealth + '%';
+        healthProgress.style.width = newHealth + '%';
+    }
+
+    function updateWeapons(newWeaponCount) {
+        document.getElementById('weaponsModal').textContent = 'Weapons: x' + newWeaponCount;
+        weaponsProgress.style.width = (newWeaponCount * 25) + '%'; // Assuming each weapon is 25% progress
+    }
+
+    function updateCoins(newCoinCount) {
+        document.getElementById('coinsModal').textContent = 'Coins: ' + newCoinCount;
+        coinsProgress.style.width = (newCoinCount * 5) + '%'; // Assuming each coin is 5% progress
+    }
+
+    // Example usage
+    updateHealth(80);
+    updateWeapons(2);
+    updateCoins(10);
+</script>
+
+</body>
+</html>

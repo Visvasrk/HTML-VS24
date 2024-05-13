@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 100vh;
+            padding: 20px;
+        }
+        .menu {
+            position: relative;
+            width: 200px;
+            background-color: #222;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .menu:hover {
+            background-color: #333;
+        }
+        .menu:hover .expand-symbol {
+            transform: rotate(90deg);
+        }
+        .details {
+            padding: 20px;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+        }
+        .menu.clicked .details {
+            max-height: 200px;
+            opacity: 1;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+        }
+        .progress-bar {
+            width: 0;
+            height: 10px;
+            background-color: #00ffcc;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: width 0.5s ease;
+        }
+        .player-info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .player-info p {
+            margin: 5px 0;
+        }
+        .expand-symbol {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+        .expand-symbol::after {
+            content: ">";
+            font-size: 20px;
+            color: #fff;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu" onclick="toggleDetails(this)">
+        <h2>Game Menu</h2>
+        <div class="details">
+            <div class="player-info">
+                <p>Health: <span id="health">100</span></p>
+                <p>Coins: <span id="coins">50</span></p>
+                <p>Level: <span id="level">15</span>/30</p>
+            </div>
+            <button onclick="goTo('home')">Home Page</button>
+            <button onclick="goTo('lobby')">Lobby</button>
+        </div>
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="expand-symbol"></div>
+    </div>
+
+    <script>
+        function toggleDetails(menu) {
+            menu.classList.toggle('clicked');
+            const progressBar = document.getElementById('progress-bar');
+            const level = document.getElementById('level');
+            const currentLevel = parseInt(level.innerText);
+            const totalLevels = 30;
+            const progress = (currentLevel / totalLevels) * 100;
+            progressBar.style.width = progress + '%';
+        }
+
+        function goTo(destination) {
+            alert("Going to " + destination);
+            // Add code to navigate to the desired destination
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Level</title>
+    <style>
+        #character {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+        .progress-bar-container {
+            width: 300px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 5px;
+            position: relative;
+            margin-top: 20px;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #00f;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: glow 1s infinite alternate;
+        }
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 12px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px #00f;
+            }
+            100% {
+                box-shadow: 0 0 20px #00f;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="character"></div>
+    
+    <div class="progress-bar-container">
+        <div id="level-bar" class="progress-bar"></div>
+        <div id="level-text" class="progress-text">Level 0 / 30</div>
+    </div>
+    
+    <button onclick="nextLevel()">Next Level</button>
+
+    <script>
+        let level = 0;
+        const levelBar = document.getElementById('level-bar');
+        const levelText = document.getElementById('level-text');
+
+        function nextLevel() {
+            level++;
+            if (level > 30) {
+                level = 30;
+            }
+            const progress = (level / 30) * 100;
+            levelBar.style.width = progress + '%';
+            levelText.textContent = `Level ${level} / 30`;
+        }
+    </script>
+</body>
+</html>

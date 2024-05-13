@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Lobby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .lobby-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .level-card {
+            width: calc(33.33% - 20px);
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .level-card:hover {
+            transform: scale(1.05);
+        }
+
+        .player-card {
+            width: 200px;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .player-details {
+            margin-bottom: 20px;
+        }
+
+        .player-details h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .player-details p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .character-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin-right: 10px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .game-preferences {
+            margin-top: 20px;
+        }
+
+        .game-preferences h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+        }
+
+        .game-preferences ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .game-preferences li {
+            font-size: 14px;
+        }
+
+        /* Customizable settings */
+        .settings-container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .settings-container h2 {
+            margin-top: 0;
+        }
+
+        .setting-row {
+            margin-bottom: 10px;
+        }
+
+        .setting-row label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .setting-row select {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="lobby-container">
+    <div class="level-card">
+        <h2>Level 1</h2>
+        <p>Play level 1 with extra dark effects.</p>
+        <button onclick="playLevel(1)">Play</button>
+    </div>
+    <div class="level-card">
+        <h2>Level 2</h2>
+        <p>Play level 2 with extra dark effects.</p>
+        <button onclick="playLevel(2)">Play</button>
+    </div>
+    <div class="level-card">
+        <h2>Level 3</h2>
+        <p>Play level 3 with extra dark effects.</p>
+        <button onclick="playLevel(3)">Play</button>
+    </div>
+</div>
+
+<div class="player-card">
+    <div class="player-details">
+        <h2>Player Name</h2>
+        <p>Level: 5</p>
+        <p>Score: 1000</p>
+    </div>
+    <div class="character-icon">
+        <!-- Add character icon here -->
+    </div>
+    <div class="game-preferences">
+        <h3>Game Preferences</h3>
+        <ul>
+            <li>Difficulty: Hard</li>
+            <li>Graphics: High</li>
+            <li>Sound: On</li>
+        </ul>
+    </div>
+
+    <div class="settings-container">
+        <h2>Settings</h2>
+        <div class="setting-row">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <div class="setting-row">
+            <label for="graphics">Graphics:</label>
+            <select id="graphics">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+        <div class="setting-row">
+            <label for="sound">Sound:</label>
+            <select id="sound">
+                <option value="on">On</option>
+                <option value="off">Off</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<script>
+    function playLevel(level) {
+        alert("Playing level " + level);
+    }
+</script>
+
+</body>
+</html>

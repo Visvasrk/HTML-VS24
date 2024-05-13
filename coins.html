@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Coin Collector</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #coinIcon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: cyan;
+            border-radius: 50%;
+            margin-top: 20px;
+            box-shadow: 0 0 15px cyan, 0 0 25px cyan, 0 0 35px cyan, 0 0 45px cyan, 0 0 55px cyan, 0 0 75px cyan;
+        }
+        #coinCount {
+            font-size: 24px;
+            margin-top: 10px;
+            text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan, 0 0 50px cyan;
+        }
+        #collectButton {
+            background-color: cyan;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px cyan, 0 0 25px cyan, 0 0 35px cyan, 0 0 45px cyan, 0 0 55px cyan, 0 0 75px cyan;
+        }
+        #collectButton:hover {
+            background-color: #00ffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Neon Coin Collector</h1>
+    <div id="coinIcon"></div>
+    <div id="coinCount">Coins: 0</div>
+    <button id="collectButton" onclick="collectCoin()">Collect Coin</button>
+
+    <script>
+        let coinCount = 0;
+
+        function collectCoin() {
+            coinCount++;
+            updateCoinCount();
+        }
+
+        function updateCoinCount() {
+            document.getElementById("coinCount").textContent = "Coins: " + coinCount;
+        }
+    </script>
+</body>
+</html>
