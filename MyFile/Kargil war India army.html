@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+
+<style>
+				
+				.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+				
+				div.ex1 {
+  background-color:#151515;
+  color:#353f6a;
+  width: 100%;
+  height: 8%;
+  overflow: scroll;
+  border:2px solid black;
+  border-radius:20px;
+  padding:10px;
+}
+				* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ##908490; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #282f4f; 
+}  
+
+   				* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;background-color:black;color:white;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+header {
+  background-color:#2b2b2b;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  height:500px;
+  border:3px solid black;
+  color:blue;
+  text-shadow:5px 5px 7px green;
+}
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+aside{
+  float:left;
+  width: 30%;
+  height: 4500px;
+  background: #575757;
+  padding: 20px;
+  border:3px solid black;
+  color:blue
+}
+
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color:#979797;
+  height: 4500px; 
+  border:3px solid black;
+  color:#232323
+}
+
+section::after {
+  content: "THIS IS A WEB PAGE MADE BY SANJAY SHRINIVAAS OF 8A";
+  display: table;
+  clear: both;
+  border:3px solid black;
+  color:purple;
+}
+
+footer {
+  background-color:#353535;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  height:150px;
+  border:3px solid black;
+  color:violet
+}
+
+{
+  article, aside{
+    width: 00%;
+    height: auto;
+  }
+  
+   
+  </style>
+  
+ 
+  <body>
+  				
+  				
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="">About us</a>
+  <a href="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit%20user%20files/clock.html">clock app</a>
+  <a href="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit%20user%20files/weather%20app.html">weather app</a>
+  <a href="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit%20user%20files/calcutator.html">calculator</a>
+  <a href="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit%20user%20files/temperature%20converter.html">temperature converter</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+
+  				
+  				<div class="topnav">
+  	<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#kargil war">KARGIL WAR</a>
+  <a href="#who won? ">INDIA WON WAR</a>
+  <a href="#who started? ">WHO STARTED</a>
+  <a href="#after kargil war">AFTER WAR</a>
+  <a href="#during winter">DURING WINTER</a>
+  <a href="#the kargil war Memorial">WAR MEMORIAL. </a>
+</div><hr>
+  				<h1 style="text-family:serif;">USE IN LANDSCAPE MODE FOR CLEAR VIEW. </h1><hr>
+  				<header>
+  								<h1 style="text-family:serif">MILLITARY:FORNTIERS OF INDIA. </h1><br><h3 style="color:rer">THE KARGIL WAR</h3>
+  								
+  				</header>
+  				<section>
+  								<div class="navbar">
+  <a href="#6">Link</a>
+  <a href="#7">Link</a>
+  <a href="#8">Link</a>
+  <a href="#9">Link</a>
+</div>
+  								<article id="#home">
+  												<h4 id="#kargil war" style="border: 2px solid #181c2f;padding:5px;">The Kargil War, also known as the Kargil conflict, was an armed conflict fought between India and Pakistan from May to July 1999 in the Kargil district of Jammu and Kashmir and elsewhere along the Line of Control. <br><br>
+Dates: 3 May 1999 – 26 Jul 1999<br><br>
+Result: Indian victory: India regains possession of Kargil<br><br>
+Location: Kargil</h4><hr><br>
+<h4 id="#who won? "style="border: 2px solid #181c2f;padding:5px;"><mark>Who actually won Kargil war?</mark><br>
+"During the Kargil War, the gallant soldiers of the Indian Army triumphed over the Pakistani invaders with undaunted courage and determination," <br> The 115-second-long video described through captions, along with shots of soldiers, what Indian troops were up against in the terrain of Kargil</h4><hr><br>
+<h3 id="#who started? "> who started the kargil war? </h3>
+<h4 style="border: 2px solid #181c2f;padding:5px;">India launched 'Operation Vijay' to clear the Kargil sector of infiltration by Pakistani soldiers and Kashmiri militants on the Indian side of the Line of Control. 3. Kargil was the first war between India and Pakistan after the one in 1971 which had led to the formation of Bangladesh as a separate country</h4><hr><br><br>
+<h3 id="#after kargil war">WHAT HAPPENED AFTER KARGIL WAR? </h3><br>
+<h4 style="border: 2px solid #181c2f;padding:5px;">After the Indo-Pakistani War of 1971, there had been a long period with relatively few direct armed conflicts involving the military forces of the two neighbours—notwithstanding the efforts of both nations to control the Siachen Glacier by establishing military outposts on the surrounding mountains ridges and the resulting military skirmishes in the 1980s</h4><br><hr><br>
+<h3 id="#during winter">DURING WINTER</h3><br>
+<h4 style="border: 2px solid #181c2f;padding:5px;">During the winter of 1998–1999, some elements of the Pakistani Armed Forces were covertly training and sending Pakistani troops and paramilitary forces, some allegedly in the guise of mujahideen, into territory on the Indian side of the LOC. The infiltration was codenamed "Operation Badr"; its aim was to sever the link between Kashmir and Ladakh, and cause Indian forces to withdraw from the Siachen Glacier, thus forcing India to negotiate a settlement of the broader Kashmir dispute. Pakistan also believed that any tension in the region would internationalise the Kashmir issue, helping it to secure a speedy resolution. Yet another goal may have been to boost the morale of the decade-long rebellion in Jammu and Kashmir by taking a proactive role.</h4><br><hr><br>
+<h3 id="#the kargil war Memorial">THE KARGIL WAR MEMORIAL. </h3>
+<h4 style="border: 2px solid #181c2f;padding:5px;">The Kargil War memorial, built by the Indian Army, is located in Dras, in the foothills of the Tololing Hill. The memorial, located about 5 km from the city centre across the Tiger Hill, commemorates the martyrs of the Kargil War. A poem "Pushp Kii Abhilasha"[218] (Wish of a Flower) by Makhanlal Chaturvedi, a renowned 20th century neo-romantic Hindi poet, is inscribed on the gateway of the memorial greets visitors. The names of the soldiers who lost their lives in the War are inscribed on the Memorial Wall and can be read by visitors. </h4><br><hr><br>
+<h3 id="#tribute to martyrs">THE TRIBUTE TO MARTYRS. </h3><br>
+<h4 style="border: 2px solid #181c2f;padding:5px;">The Indian Army on Monday paid tribute to the martyrs of the 1999 war with Pakistan, also known as the Kargil War, on the occasion of the Kargil Vijay Diwas. The army's official Twitter handle put out a video to mark 22 years of the war, stating that 26 July "epitomises the saga of the valour of soldiers</h4><br><hr><br>
+<h4><h3 id="#kargil war heros">Kargil War Heroes</h3> <br><h5>scroll down ⬇️</h5>
+<div class="ex1"><h3 id="#1"style="border: 2px solid #181c2f;padding:5px;">1. Lieutenant Balwan Singh</h3><br>
+Known as the Tiger of Tiger Hill, Lieutenant Balwan Singh was responsible for the recapture of Tiger Hill. At 25, he led soldiers of the Ghatak platoon through a steep, treacherous path on 12-hour journey to reach the hilltop. The assault took the enemy by surprise as India was not expected to take such a difficult route. He planted the Indian tricolour atop the Tiger Hill and was later awarded the Mahavir Chakra for his bravery. 
+<br>
+
+<h3 id="#2"style="border: 2px solid #181c2f;padding:5px;">2. Captain Vikram Batra</h3>
+Later named as 'Tiger of Drass', Captain Vikram Batra died fighting Pakistani forces during the Kargil war in 1999 at the age of 24. He was given the highest wartime gallantry award Param Vir Chakra posthumously. Due to his exemplary feat, Captain Vikram was awarded many titles. He came to be fondly called the 'Tiger of Drass', the 'Lion of Kargil', the 'Kargil Hero', and so on.
+<br>
+<h3 id="#3"style="border: 2px solid #181c2f;padding:5px;">3. Naik Digendra Kumar </h3>
+Digendra Kumar's plan had surprised General VP Malik, the then army chief, who held a Sainik Darbar in Drass on June 2, 1990 after three failed attempts to get back Tololing. Tololing is located an altitude of 15,000 feet.
+
+<h3 id="#4"style="border: 2px solid #181c2f;padding:5px;">4. Grenadier Yogendra Singh Yadav </h3>
+Yogendra Yadav was the youngest person to ever be awarded the Param Vir Chakra. In August, 1999, Nayab Subedar Yogendra Singh Yadav was awarded Param Vir Chakra, India's highest military decoration. His battalion captured Tololing Top on 12 June, 1999, and in the process, 2 officers, 2 junior commissioned officers, and 21 soldiers sacrificed their lives. 
+<br>
+<h3 id="#5"style="border: 2px solid #181c2f;padding:5px;">5. Lieutenant Manoj Kumar Pandey</h3>
+Manoj Pandey was a soldier of 1/11 Gorkha Rifles. According to his father, he had joined the Indian Army with the sole aim of getting a Param Vir Chakra, the highest gallantry award, which he later acquired. Gopichand Pandey, father of late Captain Manoj Pandey said that the Kargil War was one of the toughest wars in the world where the enemy has an advantage of the altitude, but Indian Army fought hard and reclaimed our peaks. "I'm proud that my son gave his life for his motherland, and became an inspiration for many.", he said.
+<br>
+<h3 id="#6"style="border: 2px solid #181c2f;padding:5px;">6. Rifleman Sanjay Kumar</h3>
+During the Kargil war, Sanjay Kumar was part of a column that was tasked to capture area Flat Top of Point 4875 in the Mushkoh Valley. When automatic fire from one of the enemy bunkers posed stiff opposition and stalled the column, Kumar charged at them head on.
+<br>
+<h3 id="#7"style="border: 2px solid #181c2f;padding:5px;">7. Major Saurabh Kalia</h3>
+On a routine patrol of the Bajrang Post in the Kaksar sector in the rugged, treeless mountains, Saurabh Kalia and five other soldiers were encircled by a platoon of Pakistani rangers and captured alive. No trace of the patrol was left. They were all tortured by Pakistani Army Troops for 24 days, and later their mutilated bodies were handed over by the Pakistan Army.
+<br>
+<h3 id="#8"style="border: 2px solid #181c2f;padding:5px;">8. Major Vivek Gupta</h3>
+On 13 June, 1999, Vivek Gupta was in command of the leading Charlie Company, when 2 Rajputana Rifles launched a Battalion attack on Tololing Top in the Drass Sector. Under the inspiring leadership of Major Vivek Gupta, in spite of heavy artillery and automatic fire, he was able to close in with the enemy. 
+<br>
+<h3 id="#9"style="border: 2px solid #181c2f;padding:5px;">9. Captain N Kenguruse </h3>
+On the night of 28 June, 1999 during Operation Vijay, N Kenguruse was the Ghatak Platoon Commander during the attack on Area Black Rock in the Drass Sector. He took the responsibility of the daring commando mission of attacking a well-sited enemy machine gun position, on a cliff face, which was heavily interfering with all the approaches to the main objective of the Battalion.
+<br>
+<h3 id="#10"style="border: 2px solid #181c2f;padding:5px;">10. Lieutenant Keishing Clifford Nongrum</h3>
+The enemy pinned down the column of Lt. Keishing Clifford Nongrum with automatic fire for about two hours. In spite of all this, without seeing his personal safety, he threw grenades into it and killed six enemy soldiers. He then tried to snatch the universal machine gun from the enemy from the second position and received bullets. 
+<br>
+On the eve of Kargil Diwas yesterday, the epic battles of Tololing, Tiger Hill and others were recalled and 559 lamps were lit in a tribute to the martyrs at the Kargil War Memorial in Drass area of Ladakh as events to mark the 22nd Kargil Vijay Diwas commenced on Sunday in the presence of top military officers, family members of the army personnel and others.</h4></div>
+
+
+<br><br><img src="https://media.tenor.com/images/fbb84b4e3dcadd4affcda9ae592398c9/tenor.gif" alt="kargil war" width="100%" height="12%" border="5px solid black"><br><hr>
+<img src="/storage/emulated/0/DCIM/Creative/Screenshot_2021-09-11-11-36-28-708_com.google.android.googlequicksearchbox.png" alt="kargil war" width="100%" height="12%" border="5px solid black">
+
+ 
+  								</article>
+  								<aside>
+  												<a href="#1">  Lieutenant Balwan Singh</a><br>
+  												<a href="#2">Captain Vikram Batra</a><br>
+  												<a href="#3">Naik Digendra Kumar</a><br>
+  												<a href="#4">Grenadier Yogendra Singh Yadav</a><br>
+  												<a href="#5">Lieutenant Manoj Kumar Pandey</a><br>
+  												<a href="#6">Rifleman Sanjay Kumar</a><br>
+  												<a href="#7">Major Saurabh Kalia</a><br>
+  												<a href="#8">Major Vivek Gupta</a><br>
+  												<a href="#9">Captain N Kenguruse </a><br>
+  												<a href="#10">Lieutenant Keishing Clifford Nongrum</a><br>
+  												
+  								</aside>
+  				</section>
+  				<footer>
+  								<h1>The end of article</h1>
+  								<button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-refresh"></span> Refresh
+        </button>
+  				</footer>
+  </body>
+  </html>
+
